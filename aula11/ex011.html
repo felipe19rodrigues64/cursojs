@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pais de origem</title>
+</head>
+<body>
+    <h1>Nacionalidade</h1>
+    Pais de origem:  <input type="text" name="txtPais" id="txtPais"> 
+    <input type="button" value="verificar" onclick="verifica()">
+    <div id="res">
+
+    </div>
+    <script>
+            
+        function verifica() {
+            
+            var txtPais = window.document.querySelector('input#txtPais')
+            var res = window.document.querySelector('div#res')
+            var pais = String(txtPais.value)
+
+            if (pais.toUpperCase() == 'BRASIL') {
+                res.innerHTML = `Você é brasileiro!`
+            } else {
+                res.innerHTML = `Você é estrangeiro!`
+            }
+
+        }
+    </script>
+</body>
+</html>
